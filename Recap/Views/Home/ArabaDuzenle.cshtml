@@ -1,0 +1,25 @@
+﻿@model Recap.Models.Araba
+@{
+    ViewData["title"] = "Araba Düzenle";
+}
+
+<div class="row justify-content-center">
+    <div class="col-6">
+
+    </div>
+</div>
+
+<form action="/Home/ArabaDuzenle" method="post">
+    <h1 class="h3">Araba Düzenle</h1>
+    <div class="row mb-5">
+        <input asp-for="ArabaId" type="hidden" value="@Model.ArabaId" />
+
+        <label asp-for="Marka" class="form-label">Markası</label>
+        <input asp-for="Marka" class="form-control mb-4" autofocus required autocomplete="off" />
+
+        <label asp-for="Model" class="form-label">Modeli</label>
+        <input asp-for="Model" class="form-control mb-4" autofocus required autocomplete="off" />
+
+        <button type="submit" class="btn btn-primary">Güncelle</button>
+    </div>
+</form>
